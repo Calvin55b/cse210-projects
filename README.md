@@ -1,5 +1,5 @@
 # cse210-student-template
-This is the starter code for calzeus in CSE 210. I love cheese so musch.
+This is the starter code for calzeus in CSE 210. I love cheese so much.
 
 This repository contains the starter code for many different projects. They are arranged as follows:
 
