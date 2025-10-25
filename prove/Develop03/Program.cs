@@ -67,6 +67,8 @@ class Program
 
             Console.WriteLine();
 
+            Console.WriteLine($"You memorized {display.Memorized()} words!");
+
 
 
             Console.Write("Press enter to continue or type 'quit' to finish:");

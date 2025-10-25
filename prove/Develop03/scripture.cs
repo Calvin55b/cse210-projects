@@ -66,9 +66,10 @@ class Scripture
 
 
     }
-    
+
     public int ChosenCount()
     {
+        int wordsMemorized = 0;
         int wordChosen = 0;
 
         foreach (Word i in _listOfWords)
@@ -76,10 +77,31 @@ class Scripture
             if (i.IsRevealed() != true)
             {
                 wordChosen += 1;
+
+                wordsMemorized += 1;
+
             }
         }
 
         return wordChosen;
+    }
+    
+     public int Memorized()
+    {
+        int wordsMemorized = 0;
+
+        foreach (Word i in _listOfWords)
+        {
+            if (i.IsRevealed() != true)
+            {
+            
+
+                wordsMemorized += 1;
+
+            }
+        }
+
+        return wordsMemorized;
     }
     
     
