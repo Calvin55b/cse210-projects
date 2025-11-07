@@ -42,12 +42,14 @@ class Program
                 /*while(timer.IsExpired(breathing) != 0)
                 {
                     
-                breathing.BreathIn();
-
-
-
                 }
                 */
+                breathing.BreathIn();
+
+                breathing.BreathOut();
+
+
+
 
 
                 breathing.RunEnd();
@@ -81,7 +83,7 @@ class Program
 
                 reflection.displayRandomPrompt();
 
-                Console.WriteLine(@"Now ponder on each of the following questions as they elated to this experience.");
+                Console.WriteLine(@"Now ponder on each of the following questions as they related to this experience.");
 
                 Console.Write("You may begin in: ");
                 timer.TimerToBegin();
@@ -132,14 +134,14 @@ class Program
 
                 listing.DisplayPrompt();
 
-                timer.TimerToBegin();
-
                 listing.UserEntries();
+
 
 
                 listing.RunEnd();
 
                 timer.PauseWithAnimation();
+
 
                 Console.Clear();
 

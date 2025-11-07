@@ -12,6 +12,7 @@ public class Timer
 
 
 
+    
 
     //private DateTime _pauseTime;//
 
@@ -31,7 +32,7 @@ public class Timer
 
 
 
-    
+
 
 
 
@@ -44,7 +45,7 @@ public class Timer
     {
 
 
-        for (int i = 5; i > 0; i--)
+        for (int i = 8; i > 0; i--)
         //Console.Write("You may begin in:");
         {
             Console.Write(i);

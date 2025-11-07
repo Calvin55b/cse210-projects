@@ -1,8 +1,10 @@
 public class Listing : Activity
 {
 
+    private static Random random = new Random();
     private List<string> _Entries = new List<string>() { };
     private List<string> _Prompt = new List<string>()
+
     {"Who are people that you appreciate?","What are personal strengths of yours?","Who are people that you have helped this week?","When have you felt the Holy Ghost this month?","Who are some of your personal heroes?"
     };
 
@@ -15,9 +17,8 @@ public class Listing : Activity
 
         Console.WriteLine(@"List as many responses you can to the following prompt: ");
 
-        int numI = _Prompt.Count;
-        Random random = new Random();
-        int randI = random.Next(0, numI);
+        
+        int randI = random.Next(_Prompt.Count);
         Console.WriteLine(_Prompt[randI]);
 
     }
@@ -28,12 +29,17 @@ public class Listing : Activity
     {
         Timer timer = new Timer();
         timer.TimerToBegin();
+
+
+        int countDown = Duration ;
+
         DateTime startTime = DateTime.Now;
-        int countDown = 10;
+
+
         while ((DateTime.Now - startTime).TotalSeconds < countDown)
         {
 
-            Console.WriteLine("> ");
+            Console.Write("> ");
 
             string userInput = Console.ReadLine();
 
