@@ -1,7 +1,22 @@
 public class Listing : Activity
 {
+
+    private List<string> _Entries = new List<string>() { };
+    private List<string> _Prompt = new List<string>()
+    {"Who are people that you appreciate?","What are personal strengths of yours?","Who are people that you have helped this week?","When have you felt the Holy Ghost this month?","Who are some of your personal heroes?"
+    };
+
+
     //This is basically a constructor for the class and adds the two strings that almost every class inherits from the parent class.
-    public Listing() :base("Welcome to the Listing Activity.", @"This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area."){ }
+    public Listing() : base("Listing Activity.", @"This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.") { }
+
+
+    
+    
+
+
+
+    
 
 
 
