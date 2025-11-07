@@ -40,10 +40,20 @@ public class Reflection : Activity
 
     public void displayQuestion()
     {
+        Timer timer = new Timer();
+            
+        int numTime = Duration * 1000 / _Questions.Count;
 
         for (int i = 0; i < _Questions.Count; i++)
         {
-            Console.WriteLine($"{_Questions[i]}");
+            Console.Write(_Questions[i]);
+            timer.PauseWithAnimation();
+            Thread.Sleep(numTime);
+            Console.WriteLine();
+            
+            
+
+
 
 
         }

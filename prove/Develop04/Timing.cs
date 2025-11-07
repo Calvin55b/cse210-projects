@@ -65,14 +65,14 @@ public class Timer
 
     }
 
-    public void PauseWithAnimation()
+    public void PauseWithAnimation(int duration)
     {
     
 
          DateTime startTime = DateTime.Now;
 
 
-        DateTime endTime = startTime.AddSeconds(4);
+        DateTime endTime = startTime.AddSeconds(3);
 
         int i = 0;
 
