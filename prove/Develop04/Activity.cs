@@ -18,8 +18,8 @@ public class Activity
     {
         _title = titleP;
 
-
         _description = descriptionP;
+        
 
         _duration = 0;
 
@@ -44,7 +44,12 @@ public class Activity
     public void RunBegin()
     {
 
-        Console.WriteLine($"{_title} \n {_description} \n How long, in seconds, would you like for your session?");
+        Console.WriteLine($"{_title}");
+        Console.WriteLine();
+        Console.WriteLine($"{_description}");
+        Console.WriteLine();
+        Console.WriteLine("How long, in seconds, would you like for your session?");
+        
 
         string userInput = Console.ReadLine();
 

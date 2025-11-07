@@ -9,14 +9,14 @@ public class Timer
 
     public Timer(){ }
 
-   
-    
+
+
 
 
     //private DateTime _pauseTime;//
 
-
-    public void IsExpired(Activity activity) 
+    // This is to see how long the activity is
+    public void IsExpired(Activity activity)
     {
 
 
@@ -31,7 +31,31 @@ public class Timer
 
 
 
-        Console.WriteLine("Well Done !!!");
+    
+
+
+
+
+
+
+    }
+    // This is the timer to show how long until the user can begin a given activity
+    public void TimerToBegin() 
+    {
+
+
+        for (int i = 5; i > 0; i--)
+        //Console.Write("You may begin in:");
+        {
+            Console.Write(i);
+
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+
+        }
+
+
+
 
            
         
@@ -42,12 +66,12 @@ public class Timer
 
     public void PauseWithAnimation()
     {
-        Console.WriteLine("Getting ready....");
+    
 
          DateTime startTime = DateTime.Now;
 
 
-        DateTime endTime = startTime.AddSeconds(8);
+        DateTime endTime = startTime.AddSeconds(4);
 
         int i = 0;
 
@@ -65,6 +89,8 @@ public class Timer
                 i = 0;
 
             }
+
+            
 
         }
 
