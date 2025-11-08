@@ -1,35 +1,50 @@
 public class Breathing : Activity
 {
-
-    public Breathing() : base(@"Breathing Activity",
-
-
-    @"To help you relax, this activity assists you to breathe. Clear your mind. Focus on breathing.")
+    public Breathing() : base(
+        "Breathing Activity",
+        "To help you relax, this activity assists you to breathe. Clear your mind. Focus on breathing.")
     { }
 
 
-
-    public void BreathIn()
+    public void RunBreathing()
     {
-        Console.WriteLine("Breathe in...");
+        
+        Console.Clear();
 
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(Duration);
 
-
+        while (DateTime.Now < endTime)
+        {
+            BreathIn(Duration / 4);
+            Console.WriteLine();
+            BreathOut(Duration / 4);
+            Console.WriteLine();   
+        }
     }
-    
-    public void BreathOut()
+
+
+
+    private void BreathIn(int seconds)
     {
-
-        Console.WriteLine("Breathe out...");
+        Console.Write("Breathe in... ");
+        Countdown(seconds);
+        Console.WriteLine();
     }
-    
 
+    private void BreathOut(int seconds)
+    {
+        Console.Write("Now breathe out... ");
+        Countdown(seconds);
+        Console.WriteLine();
+    }
 
-
-
-
-
-
-
-
+    private void Countdown(int seconds)
+    {
+        for (int i = seconds; i > 0; i--)
+        {
+            Console.Write(i + " ");
+            Thread.Sleep(1000); // Wait 1 second per count
+        }
+    }
 }

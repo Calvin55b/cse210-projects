@@ -45,7 +45,7 @@ public class Timer
     {
 
 
-        for (int i = 8; i > 0; i--)
+        for (int i = 5; i > 0; i--)
         //Console.Write("You may begin in:");
         {
             Console.Write(i);
@@ -65,18 +65,18 @@ public class Timer
 
     }
 
-    public void PauseWithAnimation(int duration)
+    public void PauseWithAnimation()
     {
-    
-
-         DateTime startTime = DateTime.Now;
 
 
-        DateTime endTime = startTime.AddSeconds(3);
+        DateTime startTime = DateTime.Now;
+
+
+        DateTime endTime = startTime.AddSeconds(4);
 
         int i = 0;
 
-        while(DateTime.Now < endTime)
+        while (DateTime.Now < endTime)
         {
             string s = _animation[i];
             Console.Write(s);
@@ -91,15 +91,20 @@ public class Timer
 
             }
 
-            
+
 
         }
-
-
-
-    }
-
-
+    }    
+        
+        public void Countdown(int seconds)
+        {
+            for (int i = seconds; i > 0; i--)
+            {
+                Console.Write(i);
+                Thread.Sleep(1000);
+                Console.Write("\b \b");
+            }
+        }
 
 
 

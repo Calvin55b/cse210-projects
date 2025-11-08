@@ -44,13 +44,8 @@ class Program
                     
                 }
                 */
-                breathing.BreathIn();
-
-                breathing.BreathOut();
-
-
-
-
+                breathing.RunBreathing();
+                
 
                 breathing.RunEnd();
 
