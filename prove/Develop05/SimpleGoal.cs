@@ -1,4 +1,4 @@
-public class SimpleGoal
+public abstract class SimpleGoal
 {
     //Attributes//
 
@@ -12,9 +12,6 @@ public class SimpleGoal
     private int _points;
 
 
-    private int _totalPoints;
-
-
     private bool _done;
 
 
@@ -23,38 +20,49 @@ public class SimpleGoal
     // Constructors//
 
     // This gets the / stores the users input for the name of their goal and description of that goal.
-    public SimpleGoal(string name, string description)
+    public SimpleGoal(string name, string description, int points)
     {
         
         _name = name;
 
         _description = description;
 
+        _points = points;
+
+        _done = false;
+
 
     }
 
-    // adds the points from each activity to the cummalitive score.
-    public void GetCumulativeScore()
-    {
-        int totalPoints = 0;
-        _totalPoints = totalPoints;
 
-    }
 
     // points for each completed activity
-    public void Points(int Points)
+    public void Points(int points)
     {
         
-        _points = Points;
+        _points = points;
 
     }
 
-    public void Display ()
+
+
+    public void CompleteGoal()
     {
         
+      
 
 
 
+
+
+    }
+
+    public virtual void Display ()
+    {
+       Console.WriteLine($"Goal: {_name}");
+       Console.WriteLine($"Goal Description: {_description}");
+       Console.WriteLine($"Points for {_name}: {_points}");
+       
 
 
     }
