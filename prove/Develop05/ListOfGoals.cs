@@ -51,7 +51,7 @@ public class ListOfGoals
 
                     Console.Write("How many points is this project worth? ");
 
-                int userpoints = Console.Read();
+                int userpoints = int.Parse(Console.ReadLine());
 
                 BasicGoal goal = new BasicGoal(name, description, userpoints);
 
@@ -81,7 +81,7 @@ public class ListOfGoals
 
                     Console.Write("How many points is this project worth? ");
 
-                int userpoints = Console.Read();
+                int userpoints = int.Parse(Console.ReadLine());
 
                  EternalGoal goal  = new EternalGoal(name, description, userpoints);
 
