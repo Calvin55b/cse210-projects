@@ -9,7 +9,10 @@ public EternalGoal(string name, string description, int points)
 
 
 
-
+ public override void Display()
+    {
+      
+    }
 
 
 
