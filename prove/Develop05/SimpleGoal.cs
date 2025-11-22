@@ -1,18 +1,18 @@
-public abstract class SimpleGoal
+public class SimpleGoal
 {
     //Attributes//
 
 
 
-    private string _name;
+    protected string _name;
 
-    private string _description;
-
-
-    private int _points;
+    protected string _description;
 
 
-    private bool _done;
+    protected int _points;
+
+
+    protected bool _done;
 
 
 
@@ -34,6 +34,14 @@ public abstract class SimpleGoal
 
     }
 
+    public void SetDone()
+    {
+        
+        _done = true;
+
+
+    }
+
 
 
     // points for each completed activity
@@ -46,14 +54,23 @@ public abstract class SimpleGoal
 
 
 
-    public void CompleteGoal()
+    public virtual int CompleteGoal()
     {
         
       
+        SetDone();
+
+        return _points;
 
 
 
 
+    }
+
+    public void DisplayName()
+    {
+        
+        Console.WriteLine($"{_name}");
 
     }
 
@@ -65,6 +82,12 @@ public abstract class SimpleGoal
        
 
 
+    }
+
+
+    public override string ToString()
+    {
+        return $"Simple Goal: {_name}, {_description}, {_points},{_done}";
     }
 
 

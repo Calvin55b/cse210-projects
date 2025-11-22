@@ -14,6 +14,10 @@ public EternalGoal(string name, string description, int points)
       
     }
 
+ public override string ToString()
+    {
+        return $"Eternal Goal: {_name}, {_description}, {_points},{_done}";
+    }
 
 
 

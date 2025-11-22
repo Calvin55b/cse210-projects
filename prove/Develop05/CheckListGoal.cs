@@ -30,6 +30,10 @@ public override void Display()
 
 
 
+public override string ToString()
+    { 
+        return $"Check List Goal: {_name}, {_description}, {_points},{_bonusPoints},{_goalofCompletions},{_timesCompleted}";
+    }
 
 
 
