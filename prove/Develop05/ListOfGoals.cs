@@ -18,6 +18,10 @@ public class ListOfGoals
 
 
     }
+
+
+   
+    
     public int GetTotalPoints()
     {
 

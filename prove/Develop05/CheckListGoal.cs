@@ -7,6 +7,8 @@ private int _goalofCompletions;
 
 
 
+
+
 public  ChecklistGoal (string name, string description, int points, int goalOfCompletions, int bonusPoints) 
 
 : base(name, description, points)
@@ -32,7 +34,12 @@ public override void Display()
 
 public override string ToString()
     { 
-        return $"Check List Goal: {_name}, {_description}, {_points},{_bonusPoints},{_goalofCompletions},{_timesCompleted}";
+        return $"Check List Goal: {_name}, {_description}, {_points},{_bonusPoints},{_goalofCompletions},{_timesCompleted},{_done}";
+    }
+
+    public override string GetGoalType()
+    {
+        return "Check List Goal:";
     }
 
 

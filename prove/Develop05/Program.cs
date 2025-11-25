@@ -9,6 +9,8 @@ class Program
 
         ListOfGoals goalManager = new ListOfGoals();
 
+     
+
         while (run)
         {
 
@@ -48,18 +50,13 @@ class Program
 
                 //List Goals//
 
-                Console.WriteLine($"{goalManager.GetGoals()}");
-
                 Console.WriteLine("The goals are:\n");
 
 
                 foreach (SimpleGoal g in goalManager.GetGoals())
                 {
 
-                    string[] parts = g.ToString().Split(" ");
-                    string tilte = parts[0];
-                    string description = parts[1];
-                    Console.WriteLine($"[] {tilte} ({description}) \n");
+                    Console.WriteLine($"[] {g.GetGoalType()} {g.GetName()} - {g.GetDescription()}");
 
 
 
@@ -154,6 +151,7 @@ class Program
                         string name = attributes[0];
                         string description = attributes[1];
                         string points = attributes[2];
+                        string done = attributes[3];
                         
 
 
@@ -173,6 +171,15 @@ class Program
                     {
                         
                         string name = attributes[0];
+                        string description = attributes[1];
+                        string points = attributes[2];
+                        string bonusPoints = attributes[3];
+                        string goalOfCompletions = attributes[4];
+
+                        // I need to figure out a way to change the number of times a goal was completed. I think I need to do this in the record section but I also need a way to load that recorded event.
+                        string done = attributes[6];
+                    
+
 
 
 

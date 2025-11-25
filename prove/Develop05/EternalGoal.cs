@@ -19,6 +19,11 @@ public EternalGoal(string name, string description, int points)
         return $"Eternal Goal: {_name}, {_description}, {_points},{_done}";
     }
 
+    public override string GetGoalType()
+    {
+        return "Eternal Goal:";
+    }
+
 
 
 }

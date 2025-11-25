@@ -90,6 +90,25 @@ public class SimpleGoal
         return $"Simple Goal: {_name}, {_description}, {_points},{_done}";
     }
 
+    public string GetName()
+    {
+        
+        return _name;
+    }
+
+    public string GetDescription()
+    {
+        
+        return _description;
+
+    }
+
+    public virtual string GetGoalType()
+    {
+        
+
+        return "Simple Goal:";
+    }
 
 
 
