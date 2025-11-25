@@ -20,7 +20,7 @@ public class ListOfGoals
     }
 
 
-   
+ 
     
     public int GetTotalPoints()
     {
@@ -37,6 +37,8 @@ public class ListOfGoals
         _totalPoints += points;
 
     }
+
+    
 
 
     public void makeGoal()

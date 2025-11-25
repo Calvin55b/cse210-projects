@@ -24,6 +24,8 @@ public EternalGoal(string name, string description, int points)
         return "Eternal Goal:";
     }
 
+   
+
 
 
 }

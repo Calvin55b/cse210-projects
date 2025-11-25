@@ -8,7 +8,7 @@ class Program
         bool run = true;
 
         ListOfGoals goalManager = new ListOfGoals();
-
+        
      
 
         while (run)
@@ -52,14 +52,27 @@ class Program
 
                 Console.WriteLine("The goals are:\n");
 
+                    int count = 1;
+
 
                 foreach (SimpleGoal g in goalManager.GetGoals())
                 {
 
-                    Console.WriteLine($"[] {g.GetGoalType()} {g.GetName()} - {g.GetDescription()}");
+                if (g is ChecklistGoal clgoal)
+                    {
+                        Console.Write($"{count} {g.DisplayCheck()} {g.GetName} ({g.GetDescription})--Currently Completed {clgoal.GetTimesCompleted()}/{clgoal.GetGoalOfCompletions()}");
+                    }
+
+                    // I can use get type method here to show the type of goal. However, If I am loading goals then this will display the type of goal twice.
+                    else
+                    {
+                        
+                    Console.WriteLine($"{count} {g.DisplayCheck()} {g.GetName()} ( {g.GetDescription()})");
 
 
+                    }
 
+                    count = count+1;
                 }
 
 
@@ -155,7 +168,7 @@ class Program
                         
 
 
-                        SimpleGoal eternalGoal = new SimpleGoal(name, description, int.Parse(points));
+                        SimpleGoal eternalGoal = new EternalGoal(name, description, int.Parse(points));
 
                         if (done == "true")
                         {
@@ -175,11 +188,19 @@ class Program
                         string points = attributes[2];
                         string bonusPoints = attributes[3];
                         string goalOfCompletions = attributes[4];
-
                         // I need to figure out a way to change the number of times a goal was completed. I think I need to do this in the record section but I also need a way to load that recorded event.
                         string done = attributes[6];
                     
 
+                        SimpleGoal checkList = new ChecklistGoal(name, description, int.Parse(points), int.Parse(bonusPoints), int.Parse(goalOfCompletions));
+
+
+                         if (done == "true")
+                        {
+                            checkList.SetDone();
+                        }
+
+                        goalManager.LoadGoal(checkList);
 
 
 
@@ -220,6 +241,7 @@ class Program
 
                 Console.Write("What goal did you complete? ");
 
+
                 string completedChoice = Console.ReadLine();
 
                 int index = int.Parse(completedChoice);
@@ -227,9 +249,17 @@ class Program
                SimpleGoal achievedGoal = goalManager.GetGoals() [index-1];
 
                int score =  achievedGoal.CompleteGoal();
-
+            
 
                goalManager.AddPoint(score);
+
+               achievedGoal.SetDone(); // This will set the goal as complete
+
+               Console.WriteLine($"Congratulations! You have earned {score}");
+
+               Console.WriteLine();
+
+               Console.WriteLine($"You have {goalManager.GetTotalPoints()} points");
 
 
 

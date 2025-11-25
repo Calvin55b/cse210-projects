@@ -110,6 +110,26 @@ public class SimpleGoal
         return "Simple Goal:";
     }
 
+    public virtual string  DisplayCheck()
+    {
+        
+
+        string status;
+
+        if (_done)
+        {
+            
+                status = "[X]";
+        }
+
+        else
+        {
+            
+            status = "[ ]";
+        }
+      return status;
+    }
+
 
 
 

@@ -42,7 +42,17 @@ public override string ToString()
         return "Check List Goal:";
     }
 
+    public int GetTimesCompleted()
+    {
+        
+        return _timesCompleted;
+    }
 
+    public int GetGoalOfCompletions()
+    {
+        
+        return _goalofCompletions;
+    }
 
 
 }
