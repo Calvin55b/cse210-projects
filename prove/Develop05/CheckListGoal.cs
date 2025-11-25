@@ -54,5 +54,21 @@ public override string ToString()
         return _goalofCompletions;
     }
 
+    public override int CompleteGoal()
+    {
+        _timesCompleted ++;
+
+        if (_timesCompleted >= _goalofCompletions && !_done)
+        {
+            
+            _done = true;
+
+            return _points + _bonusPoints;
+        }
+
+        return _points;
+
+    }
+
 
 }

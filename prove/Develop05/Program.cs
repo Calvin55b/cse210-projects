@@ -60,7 +60,7 @@ class Program
 
                 if (g is ChecklistGoal clgoal)
                     {
-                        Console.Write($"{count} {g.DisplayCheck()} {g.GetName} ({g.GetDescription})--Currently Completed {clgoal.GetTimesCompleted()}/{clgoal.GetGoalOfCompletions()}");
+                        Console.Write($"{count} {g.DisplayCheck()} {g.GetName()} ({g.GetDescription()})--Currently Completed {clgoal.GetTimesCompleted()}/{clgoal.GetGoalOfCompletions()}");
                     }
 
                     // I can use get type method here to show the type of goal. However, If I am loading goals then this will display the type of goal twice.
@@ -75,6 +75,7 @@ class Program
                     count = count+1;
                 }
 
+                Console.WriteLine();
 
                 Console.WriteLine($"You have {goalManager.GetTotalPoints()} points.\n");
 
@@ -253,7 +254,6 @@ class Program
 
                goalManager.AddPoint(score);
 
-               achievedGoal.SetDone(); // This will set the goal as complete
 
                Console.WriteLine($"Congratulations! You have earned {score}");
 
