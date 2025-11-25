@@ -38,7 +38,7 @@ public class ListOfGoals
 
     }
 
-    
+
 
 
     public void makeGoal()
@@ -141,7 +141,7 @@ public class ListOfGoals
 
             int goalOfCompletions = int.Parse(Console.ReadLine());
 
-            Console.Write("What is the bonus for accomplishing it that many times? ");
+            Console.Write("What is the bonus for accomplishing this goal? ");
 
             int bonusPoints = int.Parse(Console.ReadLine());
 

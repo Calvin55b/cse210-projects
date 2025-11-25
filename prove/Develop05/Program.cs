@@ -64,10 +64,20 @@ class Program
                     }
 
                     // I can use get type method here to show the type of goal. However, If I am loading goals then this will display the type of goal twice.
+                    else if(g is SimpleGoal sgoal)
+                    {
+                        
+
+                    Console.WriteLine($"{count} {g.DisplayCheck()} {g.GetName()} ( {g.GetDescription()})");
+
+
+
+                    }
+                    
                     else
                     {
                         
-                    Console.WriteLine($"{count} {g.DisplayCheck()} {g.GetName()} ( {g.GetDescription()})");
+                         Console.WriteLine($"{count} [ ] {g.GetName()} ( {g.GetDescription()})");
 
 
                     }
