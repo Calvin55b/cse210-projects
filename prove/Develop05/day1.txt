@@ -1,0 +1,3 @@
+Simple Goal: run, I want to run 30 minutes a day, 50,False
+Eternal Goal: prayer, I want to pray before each meal, 25,False
+Check List Goal: I want to learn a new word in portuguese every day, I want to learn a new word, 10,200,5,0,False
