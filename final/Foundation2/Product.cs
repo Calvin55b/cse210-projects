@@ -11,7 +11,20 @@ private double _price;
 
 private int _quantity;
 
+public void SetProductInfo(string name, int productId, double price, int quantity)
+    {
+        
+        _name = name;
 
+        _productId = productId;
+
+        _price = price;
+
+        _quantity = quantity;
+
+
+
+    }
 public double GetOrderPrice()
     {
         

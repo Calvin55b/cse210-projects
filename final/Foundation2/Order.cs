@@ -32,7 +32,7 @@ public class Order
     public string Shipping()
     {
         
-        return $"--SHIPPING LABEL--\nCustomer name: {_customer.GetName()} - Customer address: {_customer.GetAddress()}";
+        return $"--SHIPPING LABEL--\nCustomer name: {_customer.GetName()} - Customer address: {_customer.GetAddress().GetAddress()}";
 
         
 
@@ -46,7 +46,7 @@ public class Order
         foreach (Product i in _product)
         {
             
-            Console.WriteLine($"Product Name: {i.GetProductname()} - Product ID: {i.GetProductId()}\n");
+            Console.WriteLine($"--PACKING LABEL-- \nProduct Name: {i.GetProductname()} - Product ID: {i.GetProductId()}\n");
 
         }
        
@@ -64,7 +64,7 @@ public class Order
     {
         
 
-        Console.WriteLine($"The total price of the order is: {TotalOrderPrice()}");
+        Console.WriteLine($"--TOTAL ORDER PRICE--\n [${TotalOrderPrice()}]");
 
     }
 

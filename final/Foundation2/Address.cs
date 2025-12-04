@@ -30,30 +30,36 @@ public class Address
 
     }
 
+    public string GetAddress()
+    {
+        
+        return $"{_street}, {_city}, {_state}, {_country}";
+    }
+
    public string GetCountry()
     {
         
         return _country;
     }
-    public bool InUs()
-    {
+    // public bool InUs()
+    // {
         
         
-        if (_country == "US" || _country == "United States")
-        {
+    //     if (_country == "US" || _country == "United States")
+    //     {
             
             
-            return true;
+    //         return true;
 
-        }
+    //     }
 
-        else
-        {
+    //     else
+    //     {
            
-            return false;
-        }
+    //         return false;
+    //     }
 
-    }    
+    // }    
     public int ShippingPrice()
     {
         
