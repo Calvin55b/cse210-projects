@@ -43,10 +43,10 @@ public class Order
 
     public void Packing()
     {
+            Console.WriteLine("--PACKING LABEL--");
         foreach (Product i in _product)
         {
-            
-            Console.WriteLine($"--PACKING LABEL-- \nProduct Name: {i.GetProductname()} - Product ID: {i.GetProductId()}\n");
+            Console.WriteLine($"Product Name: {i.GetProductname()} - Product ID: {i.GetProductId()}");
 
         }
        
