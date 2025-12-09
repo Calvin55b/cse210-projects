@@ -25,7 +25,7 @@ public class Outdoor : Event
 
     public override string GetEventSpecific()
     {
-        return $"RSVP Email: {_weather}";
+        return  $"{_weather}";
     }
 
     public override string GetFullDetails()

@@ -38,7 +38,9 @@ public class Lectures : Event
 
     public override string GetFullDetails()
     {
-        return $"Standard Deets:{GetStandardDetails()}\n Specific Deets: {GetEventSpecific()}";
+        return $"{GetStandardDetails()}\n {GetEventSpecific()}";
     }
+
+    
 
 }
