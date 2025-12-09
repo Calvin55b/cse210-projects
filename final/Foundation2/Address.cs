@@ -12,7 +12,7 @@ public class Address
 
     private string _country;
 
-    private int _shipPrice;
+    private double _shipPrice;
 
    public void SetAddress(string street,string city, string state, string country)
     {
@@ -60,7 +60,7 @@ public class Address
     //     }
 
     // }    
-    public int ShippingPrice()
+    public double ShippingPrice()
     {
         
         
@@ -68,14 +68,14 @@ public class Address
         {
             
             
-            return _shipPrice +=5;
+            return _shipPrice =5;
 
         }
 
         else
         {
            
-            return _shipPrice += 35;
+            return _shipPrice = 35;
         }
 
 
