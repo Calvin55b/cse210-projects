@@ -64,7 +64,7 @@ public class Order
     {
         
 
-        Console.WriteLine($"--TOTAL ORDER PRICE--\n [${TotalOrderPrice()}]");
+        Console.WriteLine($"--TOTAL ORDER PRICE--\n [${TotalOrderPrice():F2}]");
 
     }
 
