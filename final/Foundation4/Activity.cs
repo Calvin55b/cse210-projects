@@ -3,11 +3,11 @@ public class Activity
 
 
 private DateOnly _date;
-
+//Time is the duration of the activity in min
 private int _time;
 
 
-private double _distance;
+//private double _distance;
 
 
 private string _type;
@@ -18,7 +18,7 @@ private string _type;
 // private double _pace;
 
 
-public Activity(DateOnly date, string type, int time, double distance)
+public Activity(DateOnly date, string type, int time)
     {
         
         _date = date;
@@ -27,7 +27,7 @@ public Activity(DateOnly date, string type, int time, double distance)
 
         _time = time;
 
-        _distance = distance;
+        //_distance = distance;
 
        
 
@@ -36,14 +36,10 @@ public Activity(DateOnly date, string type, int time, double distance)
 
 
 
-public void SetTimeAndDistance(int time, double distance)
+public void SetTime(int time)
     {
         
         _time = time;
-
-        _distance = distance;
-
-
 
 
     }
@@ -59,14 +55,14 @@ public int GetTime()
 public virtual double GetDistance()
     {
         
-        return _distance ;
+        return 1.0 ;
     }
 
 
 public virtual double GetSpeed()
     {
         
-        return _distance / _time * 60;
+        return 1.0;
 
 
     }
@@ -75,7 +71,7 @@ public virtual double GetSpeed()
 public virtual double GetPace()
     {
         
-        return _time / _distance;
+        return _time;
 
 
 

@@ -10,12 +10,7 @@ class Program
         
         Cycling cycling = new Cycling(date1,"Cycling", 25, 4.8);
 
-        // cycling.GetSpeed();
-
-        // cycling.GetPace();
-
-        // cycling.GetSummary();
-
+        
         list.AddActivity(cycling);
 
         //Creation of the running activity/ addition to the list of activities
@@ -26,11 +21,7 @@ class Program
         
         Running running = new Running(date2,"Running", 45, 10.0);
 
-        // running.GetSpeed();
-
-        // running.GetPace();
-
-        // running.GetSummary();
+       
 
         list.AddActivity(running);
 
@@ -42,11 +33,7 @@ class Program
 
         swim.GetLapDistance();
 
-        // swim.GetSpeed();
-
-        // swim.GetPace();
-
-        // swim.GetSummary();
+       
 
         list.AddActivity(swim);
 

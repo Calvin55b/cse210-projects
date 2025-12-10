@@ -2,34 +2,34 @@ using System;
 
 class Program
 {
-    static void Main(string[] args)
-    {
+   static void Main(string[] args)
+   {
 
-        //For the Lecture Event
-        DateOnly date1 = new DateOnly(2026, 01,12);
-        TimeOnly time1 = new TimeOnly(11,15);
-       Address address1 = new Address();
+      //For the Lecture Event
+      DateOnly date1 = new DateOnly(2026, 01,12);
+      TimeOnly time1 = new TimeOnly(11,15);
+      Address address1 = new Address();
 
-        address1.SetAddi("123 University Ave", "Provo","UT 84604", "USA");
+      address1.SetAddi("123 University Ave", "Provo","UT 84604", "USA");
 
-        
+         
 
-        Lectures lecture1 = new Lectures("Cybersecurity in a Post-Quantum World","A lecture discussing the challenges and solutions in securing data against emerging quantum decryption techniques.",address1, date1,time1, "Dr. Amelia Hawthorne", 250);
+         Lectures lecture1 = new Lectures("Cybersecurity in a Post-Quantum World","A lecture discussing the challenges and solutions in securing data against emerging quantum decryption techniques.",address1, date1,time1, "Dr. Amelia Hawthorne", 250);
 
-        lecture1.GetEventType();
-        Console.WriteLine("--Short Description--");
-        Console.WriteLine();
-       Console.WriteLine(lecture1.GetShortDescription());
-        Console.WriteLine();
-        Console.WriteLine("--Standard Description--");
-        Console.WriteLine(lecture1.GetStandardDetails());
+         lecture1.GetEventType();
+         Console.WriteLine("--Short Description--");
+         Console.WriteLine();
+         Console.WriteLine(lecture1.GetShortDescription());
+         Console.WriteLine();
+         Console.WriteLine("--Standard Description--");
+         Console.WriteLine(lecture1.GetStandardDetails());
 
-        Console.WriteLine();
+         Console.WriteLine();
 
-        lecture1.GetEventSpecific();
-        Console.WriteLine("--Full Details--");
-       Console.WriteLine(lecture1.GetFullDetails());
-       Console.WriteLine();
+         lecture1.GetEventSpecific();
+         Console.WriteLine("--Full Details--");
+         Console.WriteLine(lecture1.GetFullDetails());
+         Console.WriteLine();
 
 
     //For the Outdoor Event

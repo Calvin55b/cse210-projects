@@ -18,18 +18,6 @@ public Comments(string creator, string comment)
 
 
     }
-// public void SetComments(string creator, string comment)
-//     {
-
-
-//         _creator = creator;
-
-//         _commentText = comment;
-
-        
-
-
-//     }
 
 
 public string Creator()

@@ -4,7 +4,7 @@ public class Swim : Activity
     
 
 
-public Swim (DateOnly date, string type, int time,int laps) : base(date, type, time, 0)
+public Swim (DateOnly date, string type, int time,int laps) : base(date, type, time)
     {
         _laps = laps;
 

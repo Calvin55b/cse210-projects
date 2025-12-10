@@ -41,25 +41,7 @@ public class Address
         
         return _country;
     }
-    // public bool InUs()
-    // {
-        
-        
-    //     if (_country == "US" || _country == "United States")
-    //     {
-            
-            
-    //         return true;
-
-    //     }
-
-    //     else
-    //     {
-           
-    //         return false;
-    //     }
-
-    // }    
+    
     public double ShippingPrice()
     {
         

@@ -35,9 +35,9 @@ private List<Comments> _comment= new List<Comments>();
     {
         
 
-        Console.WriteLine($"Title:{_title}");
-        Console.WriteLine($"Author:{_author}");
-        Console.WriteLine($"Video Length:{_length} (Seconds)");
+        Console.WriteLine($"Title: {_title}");
+        Console.WriteLine($"Author: {_author}");
+        Console.WriteLine($"Video Length: {_length} (Seconds)");
 
         Console.WriteLine();
         Console.WriteLine("Comments: ");

@@ -1,11 +1,11 @@
 public class Running : Activity
 {
     
+private double _distance;
 
-
-public Running (DateOnly date, string type, int time, double distance) : base(date, type, time, distance)
+public Running (DateOnly date, string type, int time, double distance) : base(date, type, time)
     {
-        
+        _distance = distance;
 
     }
 
